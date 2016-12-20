@@ -10,6 +10,8 @@ use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
 AppAsset::register($this);
+//AppAsset::addScript($this,Yii::$app->request->baseUrl."/js/jquery.js");
+//AppAsset::addCss($this,Yii::$app->request->baseUrl."/css/style.css");
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -23,7 +25,6 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-
 <div class="wrap">
     <?php
     NavBar::begin([
@@ -56,7 +57,7 @@ AppAsset::register($this);
     NavBar::end();
     ?>
 
-    <div class="container">
+    <div class="container" border="0px">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>

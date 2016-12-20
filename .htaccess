@@ -1,0 +1,7 @@
+Options +FollowSymLinks
+IndexIgnore */*
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^(www\.)?erertv\.com$
+RewriteRule ^(/)?$ web/index.php [L]
+
